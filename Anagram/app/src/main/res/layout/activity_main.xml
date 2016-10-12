@@ -8,10 +8,47 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jarid.anagram.MainActivity">
+    android:background="#111111"
+    tools:context="com.example.jarid.anagram.MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:text="Make A Selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            tools:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:paddingBottom="50dp"
+            android:paddingTop="25dp" />
+
+        <Button
+                android:text="PLAY"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonKeyPlay"
+                android:layout_width="150dp"
+                android:textAlignment="center"
+                tools:layout_gravity="center" />
+
+        <Button
+                android:text="EXIT"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonKeyExit"
+                android:layout_width="150dp"
+                android:textAlignment="center"
+                tools:layout_gravity="center" />
+
+    </LinearLayout>
+
+
 </RelativeLayout>
