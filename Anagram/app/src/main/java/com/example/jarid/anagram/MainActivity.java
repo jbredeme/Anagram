@@ -1,66 +1,47 @@
 package com.example.jarid.anagram;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.io.*;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button buttonRead;
-    TextView textView1;
-    EditText editText3;
-    String[] result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button buttonPlay = (Button)findViewById(R.id.buttonPlay);
+        Button buttonExit = (Button)findViewById(R.id.buttonExit);
 
 
-
-
-
-
-        buttonRead = (Button)findViewById(R.id.buttonPlay);
-        textView1 = (TextView)findViewById(R.id.editText3);
-
-        buttonRead.setOnClickListener(new View.OnClickListener(){
+        // Switch Activity pass username data
+        buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                String text = "";
-                try{
-                    InputStreamReader inputs = new InputStreamReader(getAssets().open("anagrams.txt"));
-                    BufferedReader br = new BufferedReader(inputs);
-                    /*InputStream inputs = getAssets().open("anagrams.txt");
-                    int size = inputs.available();
-                    byte[] buffer = new byte[size];
-                    inputs.readLine(buffer);
-                    inputs.close();*/
-                    StringBuffer stringBuffer = new StringBuffer();
-                    String line;
-                    while ((line = br.readLine()) != null) {
-                        stringBuffer.append(line);
-                        stringBuffer.append("\n");
-                    }
-                    inputs.close();
+            public void onClick(View main) {
+                EditText userinput = (EditText)findViewById(R.id.editTextUser);
+                String username = userinput.getText().toString();
+                Intent intent = new Intent(getApplicationContext(),GameActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
 
-                    text = new String();
-                    result = text.split(" ");
-                    finish();
-
-                } catch(IOException e){
-                    e.printStackTrace();;
-
-                }
-
-                textView1.setText(result[2]);
             }
         });
+
+        // Close Application
+        buttonExit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View main){
+                finish();
+                System.exit(0);
+
+            }
+
+        });
+
     }
+
 }

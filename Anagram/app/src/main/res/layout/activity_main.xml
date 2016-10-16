@@ -48,6 +48,7 @@
             android:layout_weight="1"
             android:textColor="#29B6F6"
             android:textAlignment="center"
+            android:selectAllOnFocus="true"
             android:layout_marginBottom="32dp"/>
     </LinearLayout>
 
