@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        buttonRead = (Button)findViewById(R.id.buttonRead);
+        buttonRead = (Button)findViewById(R.id.buttonPlay);
         textView1 = (TextView)findViewById(R.id.editText3);
 
         buttonRead.setOnClickListener(new View.OnClickListener(){

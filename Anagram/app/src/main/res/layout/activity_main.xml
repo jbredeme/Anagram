@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:id="@+id/textView2"
+        android:id="@+id/textViewTitle"
         android:textSize="24sp"
         android:textColor="#ffffff"
         android:textAlignment="center" />
@@ -32,7 +32,7 @@
             android:text="Enter in an alias:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
+            android:id="@+id/textViewEnterAliasLabel"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="#ffffff"
@@ -44,7 +44,7 @@
             android:inputType="text"
             android:text="anonymous"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/editTextUser"
             android:layout_weight="1"
             android:textColor="#29B6F6"
             android:textAlignment="center"
@@ -62,17 +62,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:id="@+id/buttonRead"
+            android:id="@+id/buttonPlay"
             android:layout_weight="1" />
 
         <Button
             android:text="Exit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button2"
+            android:id="@+id/buttonExit"
             android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/buttonRead"
-            android:layout_alignStart="@+id/buttonRead"
+            android:layout_alignLeft="@+id/buttonPlay"
+            android:layout_alignStart="@+id/buttonPlay"
             android:layout_weight="1" />
 
     </LinearLayout>
