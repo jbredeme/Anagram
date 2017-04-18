@@ -11,7 +11,7 @@ Enter in a word formed by rearranging the letters of another.
 
 ## Built With
 * [Android Studio] release 2.3.1
-* [Java SE Development Kit] 8u131
+* [Java SE Development Kit] release 8u131
 * Windows 10 Professional platform
 
 ## Author
